@@ -1,1 +1,17 @@
+import java.util.Scanner;
 
+public class Main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+
+        int i = 0;
+
+        System.out.println("Digite o valor desejado");
+        int valor = scan.nextInt();
+
+        while(i <= valor){
+            System.out.println(i);
+            i++;
+        }
+    }
+}
