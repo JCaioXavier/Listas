@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner coleta = new Scanner(System.in);
+        String vogais = "aeiou";
+
+        System.out.println("Digite uma letra: ");
+
+        char letra = coleta.next().toLowerCase().charAt(0);
+
+        if(vogais.indexOf(letra) != -1){
+            System.out.println("A letra selecionada é uma vogal");
+        }
+        else{
+            System.out.println("A letra selecionada é uma consoante");
+        }
+    }
+}
