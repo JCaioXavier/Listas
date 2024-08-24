@@ -1,1 +1,25 @@
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner coleta = new Scanner(System.in);
+
+        System.out.println("Em que turno você estuda? ");
+        System.out.println("M (Matutino), V (Vespertino) ou N (Noturno)?");
+
+        char horario = Character.toUpperCase(coleta.next().charAt(0));
+
+        if(horario == 'M'){
+            System.out.println("Bom Dia!");
+        }
+        else if(horario == 'V'){
+            System.out.println("Boa Tarde!");
+        }
+        else if(horario == 'N'){
+            System.out.println("Boa Noite!");
+        }
+        else{
+            System.out.println("Valor Inválido!");
+        }
+    }
+}
