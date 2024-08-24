@@ -1,1 +1,30 @@
+import java.util.Scanner;
 
+public class Main{
+    public static void main(String[] args){
+
+        Scanner scan = new Scanner(System.in);
+
+        int minimo = 100000;
+        int maximo = -100000;
+        int total = 0;
+
+        System.out.println("Digite a quantidade de numeros desejado: ");
+        int numeroD = scan.nextInt();
+
+        for(int i = 0; i < numeroD; i++) {
+            int numeroN = scan.nextInt();
+
+            if(minimo > numeroN){
+                 minimo = numeroN;
+            }
+            if(maximo < numeroN){
+                maximo = numeroN;
+            }
+            total += numeroN;
+        }
+        System.out.println(minimo);
+        System.out.println(maximo);
+        System.out.println(total);
+    }
+}
