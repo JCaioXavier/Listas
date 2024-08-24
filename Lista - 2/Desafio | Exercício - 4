@@ -1,1 +1,48 @@
+import java.util.Scanner;
 
+public class Main{
+    public static void main(String[] args){
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Nome: ");
+        String nome = scan.nextLine();
+        while(nome.length() <= 3){
+            System.out.println("Nome invalido! Nome não pode ser menor que 3 caracteres!");
+            System.out.println("Nome: ");
+            nome = scan.nextLine();
+        }
+
+        System.out.println("Idade: ");
+        int idade = scan.nextInt();
+        while(idade <= 0 || idade > 150){
+            System.out.println("Valor invalido! Idade n pode ser menor ou igual a 0 ou maior que 150!");
+            System.out.println("Idade: ");
+            idade = scan.nextInt();
+        }
+
+        System.out.println("Salário: ");
+        float salario = scan.nextFloat();
+        while(salario < 0){
+            System.out.println("Valor invalido! O salário tem q ser maior que 0!");
+            System.out.println("Salário: ");
+            salario = scan.nextFloat();
+        }
+
+        System.out.println("Sexo: ");
+        char sexo = scan.next().toUpperCase().charAt(0);
+        while(sexo != 'F' && sexo != 'M'){
+            System.out.println("Sexo invalido! Somente são aceitos F(Feminimo) e M(Masculino)");
+            System.out.println("Sexo: ");
+            sexo = scan.next().toUpperCase().charAt(0);
+        }
+
+        System.out.println("Estado Civil: ");
+        char civil = scan.next().toUpperCase().charAt(0);
+        while(civil != 'S' && civil != 'C' && civil != 'V' && civil != 'D'){
+            System.out.println("Estado civil invalido! Somente são aceitos S(Solteiro), C(Casado), V(Viúvo) e D(Divorciado)");
+            System.out.println("Estado Civil: ");
+            civil = scan.next().toUpperCase().charAt(0);
+        }
+    }
+}
