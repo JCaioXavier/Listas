@@ -17,17 +17,17 @@ public class Main {
 
         System.out.println(perguntas);
 
-        for (String pergunta : perguntas) {
+        for(String pergunta : perguntas){
             System.out.println(pergunta);
 
             String resposta = coleta.next();
 
-            if (resposta.equals("Sim")) {
+            if (resposta.equals("Sim")){
                 contador += 1;
             }
         }
 
-        if(contador >= 1 && contador <= 2) {
+        if(contador >= 1 && contador <= 2){
              System.out.println("Suspeita.");
         }
         else if(contador >= 3 && contador <= 4){
@@ -36,7 +36,7 @@ public class Main {
         else if(contador == 5){
              System.out.println("Assasino.");
          }
-        else {
+        else{
              System.out.println("Inocente.");
         }
     }
