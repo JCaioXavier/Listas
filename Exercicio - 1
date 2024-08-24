@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner coleta = new Scanner(System.in);
+        System.out.println("Digite um valor inteiro: ");
+        int valor = coleta.nextInt();
+
+        valor = valor % 2;
+
+        if(valor == 0){
+            System.out.println("O valor escolhido é um número par!");
+        }
+        else{
+            System.out.println("O valor escolhido é um número impar!");
+        }
+    }
+}
