@@ -1,1 +1,23 @@
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+
+        int p = 0, s = 1;
+
+        System.out.print(p + " " + s);
+
+        for (int i = 3; i < 700; i++){
+            int u = p + s;
+
+            if(u > 700){
+                break;
+            }
+
+            System.out.print(" " + u);
+
+            p = s;
+            s = u;
+        }
+    }
+}
